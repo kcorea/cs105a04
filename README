@@ -1,0 +1,54 @@
+Name: Kenneth Corea
+UID:  kcorea
+ 
+Contents:
+  - Summary
+  - Compiling
+  - Files
+  - Notes
+
+
+==[ Summary ]========================================================
+
+SYNOPSIS
+
+DESCRIPTION
+
+OPTIONS
+
+   -@ debugflags
+         turns on debugging flags for the DEBUGF macro. The option
+         -@@ turns on all debug flags
+
+EXIT STATUS
+   0   if OK,
+ 
+   1   if errors detected (e.g., cannot access command-line 
+       argument).
+
+
+==[ Compiling ]======================================================
+
+  make all          # creates executable myls 
+  make clean        # removes object files
+  make spotless     # removes object files and executable
+
+
+==[ Files ]==========================================================
+
+auxlib.c        usefull tools implementation
+auxlib.h        usefull tools library
+cmdtree.c       cmdtree implementation
+cmdtree.h       parsed command tree library
+cmdtree.rep.h   cmdtree struct fields visible to all files
+lexer.l         flex scanner for myshell
+lyutils.c       flex and bison intergace implementation
+lyutils.h       flex and bison interface library
+main.c          main program
+Makefile        Makefile for this project
+parser.y        bison grammar definition for myshell
+README          this file
+
+
+==[ Notes ]==========================================================
+
