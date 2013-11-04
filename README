@@ -1,5 +1,4 @@
 Name: Kenneth Corea
-UID:  kcorea
  
 Contents:
   - Summary
@@ -10,11 +9,20 @@ Contents:
 
 ==[ Summary ]========================================================
 
+NAME
+   mysh -- simple bash like shell
+
 SYNOPSIS
+   ./mysh [-ly] [-@ flag...]
 
 DESCRIPTION
+   A simple command language interpreter that executes commands
+   read from stdin.
 
 OPTIONS
+   -l    debug yylex() with yy_flex_debug = 1
+
+   -y    debug yyparse() with yydebug = 1
 
    -@ debugflags
          turns on debugging flags for the DEBUGF macro. The option
@@ -39,14 +47,14 @@ EXIT STATUS
 auxlib.c        usefull tools implementation
 auxlib.h        usefull tools library
 cmdtree.c       cmdtree implementation
-cmdtree.h       parsed command tree library
+cmdtree.h       command tree library
 cmdtree.rep.h   cmdtree struct fields visible to all files
 lexer.l         flex scanner for myshell
 lyutils.c       flex and bison intergace implementation
 lyutils.h       flex and bison interface library
 main.c          main program
 Makefile        Makefile for this project
-parser.y        bison grammar definition for myshell
+parser.y        bison grammar definitions for myshell
 README          this file
 
 
